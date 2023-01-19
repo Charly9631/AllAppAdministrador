@@ -31,7 +31,6 @@ public class Administrador {
 		this.password = password;
 	}
 
-
 	public Integer getIdAdministrador() {
 		return idAdministrador;
 	}
@@ -74,10 +73,9 @@ public class Administrador {
 
 	@Override
 	public String toString() {
-		return "Administrador [id=" + idAdministrador + ", nombre=" + nombre + ", telefono=" + telefono + ", user=" + user
-				+ ", password=" + password + "]";
+		return "Administrador [idAdministrador=" + idAdministrador + ", nombre=" + nombre + ", telefono=" + telefono
+				+ ", user=" + user + ", password=" + password + "]";
 	}
-	
 	
 	
 	
