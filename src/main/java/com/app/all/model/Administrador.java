@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="administradors")
+@Table(name = "administradors")
 public class Administrador {
 
 	@Id
@@ -17,7 +17,7 @@ public class Administrador {
 	private String telefono;
 	private String user;
 	private String password;
-	
+
 	public Administrador() {
 		super();
 	}
@@ -76,8 +76,5 @@ public class Administrador {
 		return "Administrador [idAdministrador=" + idAdministrador + ", nombre=" + nombre + ", telefono=" + telefono
 				+ ", user=" + user + ", password=" + password + "]";
 	}
-	
-	
-	
-	
+
 }
