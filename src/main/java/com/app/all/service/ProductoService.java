@@ -30,5 +30,9 @@ public class ProductoService {
 	public void eliminarProducto(@PathVariable Integer id) {
 		productoRepository.deleteById(id);
 	}
+	
+	public List<Producto> listarPorNombre(String nombre){
+		return productoRepository.findByNombreLikeIgnoreCase("%"+nombre+"%");
+	}
 
 }

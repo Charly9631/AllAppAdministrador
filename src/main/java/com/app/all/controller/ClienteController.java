@@ -67,4 +67,8 @@ public class ClienteController {
 		clienteService.eliminarCliente(id);
 	}
 
+	@GetMapping(value = "/cargarClientes/{nombre}", produces= {"application/json"})
+	public List<Cliente> cargarClientes(@PathVariable String nombre){
+		return clienteService.listarPorNombre(nombre);
+	}
 }

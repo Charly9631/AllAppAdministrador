@@ -31,6 +31,12 @@ public class Administrador {
 		this.password = password;
 	}
 
+	public Administrador(String user, String password) {
+		super();
+		this.user = user;
+		this.password = password;
+	}
+
 	public Integer getIdAdministrador() {
 		return idAdministrador;
 	}

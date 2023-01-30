@@ -2,6 +2,8 @@ package com.app.all.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +23,14 @@ import com.app.all.service.AdministradorService;
 @RequestMapping("/administrador")
 public class AdministradorController {
 
+	private final Logger  LOGGER = LoggerFactory.getLogger(ProductoController.class);
+	
+	
 	@Autowired
 	public AdministradorService administradorService;
-
-	@GetMapping("")
+	
+	
+	@GetMapping("/listar")
 	public List<Administrador> listarAdministrador() {
 		return administradorService.listar();
 	}

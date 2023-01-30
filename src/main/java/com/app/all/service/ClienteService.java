@@ -29,4 +29,8 @@ public class ClienteService {
 	public void eliminarCliente(Integer id) {
 		clienteRepository.deleteById(id);
 	}
+	
+	public List<Cliente> listarPorNombre(String nombre){
+		return clienteRepository.findByNombreLikeIgnoreCase("%"+nombre+"%");
+	}
 }

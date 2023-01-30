@@ -20,6 +20,7 @@ public class DetalleVenta {
 
 	private double total;
 	private double precio;
+	private int cantidad;
 	private LocalDate fecha;
 	private String tipoPago;
 
@@ -32,12 +33,13 @@ public class DetalleVenta {
 		super();
 	}
 
-	public DetalleVenta(Integer idVenta, double total, double precio, LocalDate fecha, String tipoPago,
+	public DetalleVenta(Integer idVenta, double total, double precio, int cantidad, LocalDate fecha, String tipoPago,
 			List<Producto> productos) {
 		super();
 		this.idVenta = idVenta;
 		this.total = total;
 		this.precio = precio;
+		this.cantidad = cantidad;
 		this.fecha = fecha;
 		this.tipoPago = tipoPago;
 		this.productos = productos;
@@ -91,10 +93,18 @@ public class DetalleVenta {
 		this.productos = productos;
 	}
 
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
 	@Override
 	public String toString() {
-		return "DetalleVenta [idVenta=" + idVenta + ", total=" + total + ", precio=" + precio + ", fecha=" + fecha
-				+ ", tipoPago=" + tipoPago + ", productos=" + productos + "]";
+		return "DetalleVenta [idVenta=" + idVenta + ", total=" + total + ", precio=" + precio + ", cantidad=" + cantidad
+				+ ", fecha=" + fecha + ", tipoPago=" + tipoPago + ", productos=" + productos + "]";
 	}
 
 }

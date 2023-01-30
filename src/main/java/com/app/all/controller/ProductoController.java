@@ -67,4 +67,9 @@ public class ProductoController {
 	public void eliminarProducto(@PathVariable Integer id) {
 		productoService.eliminarProducto(id);
 	}
+	
+	@GetMapping(value="/cargarProductos/{nombre}", produces= {"application/json"})
+	public List<Producto> cargarProductos(@PathVariable String nombre){
+		return productoService.listarPorNombre(nombre);
+	}
 }
